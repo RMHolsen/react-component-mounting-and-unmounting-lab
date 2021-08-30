@@ -11,6 +11,14 @@ class Pancake extends React.Component {
   }
 
   // TODO: create a componentDidMount() which will start the interval to count how long the pancake has been cooking
+  // these do not actually need to be full arrow function format
+  componentDidMount() {
+    this.startInterval();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
   // TODO: create a componentWillUnmount() which will clear the interval
 
